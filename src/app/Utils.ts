@@ -1,8 +1,11 @@
+import { Utils } from "../test/Utils.test"
 
 
-export class Utils {
 
-    public static toUpperCase(arg: string) {
-        return ""
-    }
-}
+describe("Utils test suite", () => {
+
+    test("first test", () => {
+        const result = Utils.toUpperCase("abc")
+        expect(result).toBe("ABC")
+    })
+})

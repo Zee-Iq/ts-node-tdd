@@ -1,13 +1,11 @@
-import { Utils } from "../app/Utils"
 
 
+// create a class called "Utils"
+// should be puclic and static 
+// it should turn a string to all upper case letters
 
-describe("Utils test suite", () => {
-    test("first test ", () => {
-
-        const abc = Utils.toUpperCase("abc")
-        console.log("tests work!");
-
-
-    })
-})
+export class Utils{
+    public static toUpperCase(arg:string):string{
+        return ""
+    }
+}
