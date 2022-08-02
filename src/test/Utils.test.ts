@@ -39,6 +39,28 @@ describe("Utils test suite", () => {
         expect(expectedQuery).toBe(expectedQuery)
 
     })
-    // reminds me to still write the test 
-    test.todo("test invalid URL")
+    // testing errors 
+    test("testing invalid URL", () => {
+        function expectError() {
+            Utils.parseUrl("")
+        }
+        expect(expectError).toThrowError()
+    })
+    // testing errors with an arrow function
+    test("testing invalid URL with arrow function", () => {
+        expect(() => {
+            Utils.parseUrl("")
+        }).toThrow("Empty URL")
+    })
+    // testimg errors with a try catch block
+    // testing if the instance of the class Errors is given
+    
+    test.only("testing invalid URL with a try catch block", () => {
+        try {
+            Utils.parseUrl("")
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error)
+            expect(error).toHaveProperty("message", "Empty URL!")
+        }
+    })
 })
