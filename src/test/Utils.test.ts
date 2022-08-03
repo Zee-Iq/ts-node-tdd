@@ -55,7 +55,7 @@ describe("Utils test suite", () => {
     // testimg errors with a try catch block
     // testing if the instance of the class Errors is given
     
-    test.only("testing invalid URL with a try catch block", () => {
+    test("testing invalid URL with a try catch block", () => {
         try {
             Utils.parseUrl("")
         } catch (error) {
