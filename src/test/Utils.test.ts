@@ -1,66 +1,28 @@
-import { Utils } from "../app/Utils";
 
 
-describe("Utils test suite", () => {
+/* 
+ 1. Create a test that checks if the Class Utils contains folllowing URL:
+ “http://localhost:8080/login"
 
-    // will run one time before anything else runs
-    beforeAll(() => {
-        console.log("beforeAll");
+ 2. Check if the port is at "8080"
 
-    })
+ 3. Check if the protocol of parsed URL is "http:"
 
+ 4. Check if the the given Query is an Object 
 
-    // will run before each test 
-    beforeEach(() => {
-        console.log("beforeEach");
-
-    })
-
-    test("first test", () => {
-        const result = Utils.toUpperCase("abc")
-        expect(result).toBe("ABC")
-    })
-
-    test("Parse a simple URL", () => {
-        const parsedUrl = Utils.parseUrl("http://localhost:8080/login")
-        expect(parsedUrl.href).toBe("http://localhost:8080/login")
-        expect(parsedUrl.port).toBe("8080")
-        expect(parsedUrl.protocol).toBe("http:")
-        expect(parsedUrl.query).toEqual({})
-    })
-
-    test("Parse URL with query", () => {
-        const parsedUrl = Utils.parseUrl("http://localhost:8080/login?user=user&password=pass")
-        const expectedQuery = {
-            user: "user",
-            password: "pass"
-        }
-        expect(parsedUrl.query).toEqual(expectedQuery)
-        expect(expectedQuery).toBe(expectedQuery)
-
-    })
-    // testing errors 
-    test("testing invalid URL", () => {
-        function expectError() {
-            Utils.parseUrl("")
-        }
-        expect(expectError).toThrowError()
-    })
-    // testing errors with an arrow function
-    test("testing invalid URL with arrow function", () => {
-        expect(() => {
-            Utils.parseUrl("")
-        }).toThrow("Empty URL")
-    })
-    // testimg errors with a try catch block
-    // testing if the instance of the class Errors is given
+ 5. Test if URL is being parsed with an expected Query:
+ “http://localhost:8080/login?user=user&password=pass”
     
-    test("testing invalid URL with a try catch block", () => {
-        try {
-            Utils.parseUrl("")
-        } catch (error) {
-            expect(error).toBeInstanceOf(Error)
-            expect(error).toHaveProperty("message", "Empty URL!")
-        }
-    })
+    --> Create an Object that contains user and password
+
+    --> Test if parsed Query is equal to expected Query (Use "toEqual" here because it is an Object is not a primitive type, therefore toBe will not work)
+    
+    --> Test if 
+ 
+ 
+
+*/
+describe("Testing simple URL parsing", () => {
+    
+    test
 })
